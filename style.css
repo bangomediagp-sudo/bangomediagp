@@ -1,0 +1,439 @@
+/* Botão “Falar com um consultor” no canto inferior direito */
+#consultor-btn {
+  position: absolute;
+  bottom: 15px;       
+  right: 20px;        
+  padding: 12px 25px; 
+  border: none;
+  border-radius: 50px; 
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;        
+  cursor: pointer;
+  background: radial-gradient(circle, 
+              #FFD966 0%,    
+              #E6B800 50%,   
+              #B38F00 100%); 
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#consultor-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+}
+
+
+
+/* Protocolo Jarvis - Header puro com gradiente */
+header {
+  width: 100%;
+  height: 160px; /* altura desktop */
+  background: linear-gradient(
+    135deg,
+    #111111 0%,  /* preto da logo */
+    #333333 100%  /* cinza da logo */
+  );
+  position: relative; /* elimpede que seus dilhos */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-shadow: 0 4px 15px black ;
+}
+#logo-main{
+  width:1020px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: width 0.3s ease;
+  
+}
+
+#consultor-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+}
+
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  header {
+    height: 140px;
+  }
+  #logo-main {
+    width: 720px;
+  }
+  
+  #consultor-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header {
+    height: 120px;
+  }
+  #logo-main {
+    width:400px;
+  }
+  
+  #consultor-btn {
+    padding: 8px 9px;
+    font-size: 8px;
+  }
+}
+
+.contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+/*botoes*/
+/* Container dos botões no header */
+.menu {
+  position: absolute;       /* posição absoluta dentro do header */
+  bottom: 10px;             /* 10px da margem inferior */
+  left: 20px;               /* 20px da margem esquerda */
+  display: flex;            /* alinha os botões lado a lado */
+  gap: 15px;                /* espaço entre os botões */
+  z-index: 20;              /* fica acima do balão se houver */
+}
+
+/* Estilo dos botões */
+.btn {
+  text-decoration: none;
+  color: #D4AF37;           /* dourado */
+  background: transparent;  /* fundo transparente */
+  border: 1px solid #D4AF37;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #D4AF37;
+  color: #111111;           /* contraste no hover */
+}
+
+/* Responsividade - Tablet */
+@media (max-width: 768px) {
+  .menu {
+    bottom: 8px;
+    left: 15px;
+    gap: 12px;
+  }
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsividade - Mobile */
+@media (max-width: 480px) {
+  .menu {
+    bottom: 6px;
+    left: 10px;
+    gap: 10px;
+  }
+  .btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Reset básico Jarvis */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*a div que tem a cor dorada*/
+#bodi {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-height: 80%;
+  max-width: 100%;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(
+    circle at center, 
+    whitesmoke 0%,   /* dourado claro no centro */
+    whitesmoke 40%,  /* dourado médio */
+    whitesmoke 100%  /* dourado escuro nas bordas */
+  ); /* dourado escuro */
+  color: #fff; /* texto branco padrão */
+}
+
+/* Reset links e botões */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+#bodi>h1{
+  text-align: center;
+  color: darkgoldenrod;
+  padding: 70px 0px 0px 0px;
+}
+#bodi>h2{
+  text-align: center;
+  color: darkgoldenrod;
+  padding: 20px 0px 15px 0px;
+}
+
+/*pacotes personalizados*/
+
+/* Container dos pacotes */
+#pacote {
+  display: flex;              /* ativa flexbox */
+  justify-content: space-around; /* espaço entre os pacotes */
+  align-items: flex-start;    /* todos começam no topo */
+  flex-wrap: wrap;            /* quebra linha em telas pequenas */
+  gap: 20px;                  /* espaço entre pacotes */
+  padding: 10px 0px 0px 0px;
+}
+
+/* Cada pacote individual */
+.pacotes {
+  background: #D4AF37;        /* dourado leve */
+  color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;               /* largura fixa */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pacotes:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+/*onde a magia acontece*/
+.pacotes.active {
+  transform: translateY(-10px);
+  border-color: gold;
+}
+
+.pacotes.elite.active {
+  border-color: #6a0dad;
+}
+
+.pacotes .saberMais {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f5d06d, #d4a017, #b8860b);
+  border: none;
+  border-radius: 20px;
+  color: #111;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.pacotes.active .saberMais {
+  display: inline-block;
+}
+/*pacote start personalizado bora dropar essa bagaca*/
+#start{
+  background-color: black;
+  color: gold;
+}
+
+/*agora o pacote pro coloca nitro*/
+#pro{
+  background-image: linear-gradient(to left ,gold,#111111);
+  color: whitesmoke;
+    
+}
+
+/*agora o led da parte de baixo so pra dar o chanse esse ai é o elite*/
+#elite{
+  background: radial-gradient(circle, 
+              #FFD966 0%,    
+              #E6B800 50%,   
+              #B38F00 100%); 
+  color: black;
+  border-radius: 5px;
+}
+
+
+
+
+/*beneficios*/
+.beneficios {
+  list-style-type: "✔ ";  /* check nativo */
+  padding-left: 20px;
+  margin: 20px 0;
+  color: #fff;            /* branco para contraste */
+  font-weight: 500;       /* um pouco mais destacado */
+}
+
+
+/*eliminando as divs dos botoes saber mais*/
+.pacotes{
+  background-color: transparent;
+  box-shadow: none;
+}
+/*essa mwrda esta me xansando mano,sao 02:26 da manha e eu ainda estou trabalhando mas ok agora estamos no sobre nos*/
+#sobre-nos {
+  padding: 60px 20px;
+  background: #ffffff; /* fundo branco */
+  color: #111111;      /* texto escuro para boa leitura */
+  text-align: center;
+  border-top: 2px solid #FFD700;   /* detalhe dourado discreto */
+  border-bottom: 2px solid #FFD700;
+  margin: 70px 0px 30px 0px;
+}
+
+#sobre-nos>h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #B8860B; /* dourado suave para destaque */
+}
+
+#sobre-nos>p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px auto; /* centraliza o texto */
+}
+
+#btn-2 {
+  display: flex;               /* ativa flexbox */
+  justify-content: center;     /* centraliza horizontalmente */
+  padding: 40px 20px;          /* espaçamento superior e inferior */
+  background: transparent;            /* fundo da seção (ou transparente se quiser) */
+}
+
+#consultor-bt {
+  background: radial-gradient(circle, #FFD700 0%, #B8860B 50%, #8B6508 100%);
+  color: #111;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  border-radius: 50px;        /* cápsula 2D */
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 70px auto 60px;
+}
+
+#btn-2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+
+
+/*formas de nos contactar*/
+
+#contactar {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(to bottom ,#555555,#111111);
+  padding: 20px 30px;
+  border-radius: 20px;
+
+  max-width: 90%;
+  margin: 40px auto 40px;
+  outline: 2px solid red;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  color: gold;
+}
+/*botao para copiar os nossos contactos*/
+#contactar {
+  display: flex;
+  flex-direction: row; /* padrão: lado a lado */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* espaço entre elementos */
+  flex-wrap: wrap; /* permite quebra se não couber */
+}
+
+/* RESPONSIVO: telas pequenas */
+@media (max-width: 600px) {
+  #contactar {
+    flex-direction: column; /* empilha verticalmente */
+    gap: 10px; /* menos espaço vertical */
+  }
+
+  #contactar button {
+    width: 80%; /* botão ocupa menos espaço e centralizado */
+  }
+}
+
+/* efeito hover */
+#contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/*finalmente o fim da linha o footer,mais nao fiques muito contente ainda falta todo js,eu sei é um saco mais ninguem mandou sonhar grande e saber fazer muita coisa seu paulado*/
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+}
+
+#footer .footer-linha {
+  width: 100%;                  /* um pouco maior que o texto */
+  height: 3px;                  /* linha fina, mas visível */
+  margin: 0 auto 10px auto;
+  background: radial-gradient(circle, #FFD700 0%, #B8860B 50%, #8B6508 100%);
+}
+
+#footer p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+/*corigindo bug da linha lateral*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*ainda corigindo o mesmo erro*/
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+
+
+/*resposta visual */
+/* Feedback visual ao toque */
+.btn-clicked {
+  transform: scale(0.96);
+  transition: transform 0.15s ease;
+}
